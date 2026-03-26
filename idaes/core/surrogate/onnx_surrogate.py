@@ -17,7 +17,6 @@ Interface for importing ONNX models into IDAES
 # TODO: Missing docstrings
 # pylint: disable=missing-class-docstring
 # pylint: disable=missing-function-docstring
-# TODO: Importing protected  _ACTIVATION_OP_TYPES as not exposed in distributed version
 # pylint: disable=W0123
 from enum import Enum
 import json
@@ -40,7 +39,6 @@ if omlt_available:
         ReluBigMFormulation,
         ReluComplementarityFormulation,
     )
-    import omlt.io as omltio
 
     if onnx_available:
         from omlt.io import load_onnx_neural_network, write_onnx_model_with_bounds
